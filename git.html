@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="stylesheetMobile.css" media="screen and (max-width:480px)">
-    <link rel="stylesheet" href="stylesheetTablet.css" media="screen and (min-width:481px) and (max-width:959px)">
-    <link rel="stylesheet" href="stylesheet.css" media="screen and (min-width:960px)">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
     <script src="mainscript.js"></script>
     <title>Webutvikling</title>
     <style>
@@ -30,6 +29,12 @@
                             <li><a class="navLink" href="git.html">Git / Github</a></li>
                             <li><a class="navLink" href="mediatyper.html">Media-Typer</a></li>
                             <li><a class="navLink" href="css-layouts.html">CSS-Layouts</a></li>
+                        </ul>
+                    </li>
+                    <li class="navDropdown">Artikler Oblig 3
+                        <ul>
+                            <li><a class="navLink" href="responsivtDesign.html">Responsivt design</a></li>
+                            <li><a class="navLink" href="universellUtforming.html">Universell utforming</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,7 +61,8 @@
 
                 <h3>Git</h3>
                 <p>
-                    Git er programvare som brukes i forbindelse med versjonskontroll. 
+                    Git er programvare som brukes i forbindelse med versjonskontroll av filer, 
+                    som oftest kodefiler. 
                     Man har et repository, en type mappe som oppdateres når man gjør endringer 
                     i en lokal mappe. Så fort Git ser at den lokale mappen ikke inneholder 
                     det samme som i repository, får man muligheten til å synkronisere. 
@@ -69,7 +75,6 @@
                     <img 
                         src="medier/githubCommit.png" 
                         alt="Min siste commit." 
-                         
                     />
                     <figcaption>
                         Her er en skjermdump av min siste commit. Som man kan se, vises kodelinje nr. 
@@ -78,10 +83,10 @@
                     </figcaption>
                 </figure>
                 <p>
-                    GitHub er en nettbasert hosting service som tilbyr tjenester med 
-                    Git-teknologi. Denne tjenesten gjør det også mulig å samarbeide på én kode, 
-                    samtidig, uten at man overskriver hverandre. Dette sørger versionskontrollen 
-                    for.
+                    GitHub er en nettbasert hosting-service som tilbyr tjenester med 
+                    Git-teknologi. Denne tjenesten gjør det også mulig for flere personer å 
+                    samarbeide på én kode, samtidig, uten at man overskriver hverandre. 
+                    Dette sørger versionskontrollen for.
                 </p>
                 <p>
                     GitHub tilbyr både en betalingstjeneste og en gratis. Forskjellen er at "private 
@@ -99,6 +104,8 @@
                 
             </article>
         </main>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
 
         <footer>
             <section>

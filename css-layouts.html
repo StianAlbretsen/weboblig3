@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="stylesheetMobile.css" media="screen and (max-width:480px)">
-    <link rel="stylesheet" href="stylesheetTablet.css" media="screen and (min-width:481px) and (max-width:959px)">
-    <link rel="stylesheet" href="stylesheet.css" media="screen and (min-width:960px)">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="printSheet.css" media="print">
     <script src="mainscript.js"></script>
     <title>Webutvikling</title>
     <style>
@@ -32,6 +31,12 @@
                             <li><a class="navLink" href="css-layouts.html">CSS-Layouts</a></li>
                         </ul>
                     </li>
+                    <li class="navDropdown">Artikler Oblig 3
+                        <ul>
+                            <li><a class="navLink" href="responsivtDesign.html">Responsivt design</a></li>
+                            <li><a class="navLink" href="universellUtforming.html">Universell utforming</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -50,64 +55,161 @@
                 <header>
                     <h2>CSS-Layouts</h2>
                     <p class="publisert">
-                        Publisert <time datetime="ÅÅÅÅ-MM-DD">DD.MM.ÅÅÅÅ</time>.
+                        Publisert <time datetime="2018-09-25">25.09.2018</time>.
                     </p>
                 </header>
+                
+                <h3>CSS Grid</h3>
+
                 <figure class="artikkelBilde">
                     <img 
-                        src="medier/eksempelbilde400.jpg" 
-                        alt="" 
-                        width="400px" 
+                        src="medier/CSS_Grid.jpeg" 
+                        alt="Eksempelbilde, CSS grid." 
                     />
-                    <figcaption>
-                        Eksempelbilde.
-                    </figcaption>
                 </figure>
+
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    <strong>CSS Grid Layout</strong> er den nyeste og definitivt beste måten å lage et sideoppsett.
+                    Med Grid kan man enkelt kontrollere både rader og kolonner, og velge nøyaktig hvor de 
+                    forskjellige elementene skal plasseres.
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    Grid kan settes opp på følgende måte;
                 </p>
+                <pre>
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+    grid-auto-columns: min-content;     
+    padding:1em;
+    max-width: 95vw;
+}
+                </pre>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    "display: grid;" gir tilgang til grid-funksjonalitet<br />
+                    "grid-template-columns:" velger hvordan kolonnene skal deles opp<br />
+                    "grid-gap:" spesifiserer mellomrom mellom elementene
                 </p>
+                <pre>
+.header {
+    background: url(headerBackground.png);
+    background-size: 100% 100%;
+    padding:0.4em;
+    grid-column: 1/3;
+    grid-row: 1/3;                       
+    border-radius: 5px;
+    color: #5e6e6b;
+    text-shadow: 0.3em 0.3em 0.3em #000000;
+    font-size: 1.2em;
+    text-align: center;
+}
+                </pre>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    "grid-column:" og "grid-row:" spesifiserer hvor i grid elementet skal være.
                 </p>
+                <pre>
+.grid aside {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 1em;
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    border-radius: 5px;
+
+}
+                </pre>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    Her setter vi en grid inne i en grid.
                 </p>
+                <pre>
+.grid footer {
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    grid-column: 1/3;
+    border-radius: 5px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-auto-columns: min-content;
+    padding:1em;
+}
+                </pre>
+                <p>
+                    Her setter enda en grid inne i en grid.
+                </p>
+                <pre>
+.grid main {
+    background:rgba(255, 255, 255, 0.1);
+    color: #bbbbbb;
+    padding:1em;
+    grid-column: 1/2;
+    border-radius: 5px;
+}
+                </pre>
+                <p>
+                    Her spesifiserer vi at elementet ".grid main" kun skal strekke seg over en kolonne. 
+                    "grid-column: 1/2;" kan vi oversette til "strekk deg fra den første veggen i den første 
+                    kolonnen, til den første veggen i den andre kolonnen".
+                </p>
+                
+                <h3>CSS Flexbox</h3>
+
                 <figure class="artikkelBilde">
                     <img 
-                        src="medier/eksempelbilde400.jpg" 
-                        alt="" 
-                        width="400px" 
+                        src="medier/CSS_Flexbox.png" 
+                        alt="Eksempelbilde, CSS flexbox." 
                     />
                     <figcaption>
-                        Eksempelbilde.
+                        Eksempel på hvordan vi kan bruke Flexbox.
                     </figcaption>
                 </figure>
+
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    <strong>CSS Flexbox</strong> er en annen måte å lage sideoppsett. 
+                    Når man skal bruke Flexbox, er det alltid viktig å tenke på hvilken 
+                    retning elementene sorteres. Det kan vi bestemme ved å bruke flex-direction. 
+                    Flex-direction har fire mulige values; 
+                    <ul>
+                        <li>row</li>
+                        <li>row-reverse</li>
+                        <li>column</li>
+                        <li>column-reverse</li>
+                    </ul>
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    To viktige egenskaper er <strong>align-items</strong> og <strong>justify-content</strong>. 
+                    Egenskapen "align-items" justerer elementene på tverraksen, og "justify-content" brukes 
+                    til å justere elementene på hovedaksen.<br />
+                    Mulige values for align-items er;
+                    <ul>
+                        <li>stretch</li>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                    </ul>
+                    Mulige values for justify-content er;
+                    <ul>
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>space-around</li>
+                        <li>space-between</li>
+                        <li>space-evenly</li>
+                    </ul>
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
+                    For mer info og illustrasjoner, <a style="color: #bbbbbb;" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#The_main_axis">les mer her.</a>
                 </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum distinctio quod, beatae molestias blanditiis modi dolores illum quam exercitationem dolore error quis laudantium fuga dignissimos vel voluptatum. Commodi dolorem reiciendis fuga esse voluptatum eaque error deleniti ex dolores molestiae in soluta aut eos amet accusantium quibusdam asperiores voluptatem, eum omnis ipsam exercitationem, nemo consequatur obcaecati quo? Quas sed beatae aliquid doloremque suscipit velit adipisci reprehenderit accusamus quibusdam voluptatum eius debitis iure sunt porro inventore voluptatibus aliquam laborum minus rerum saepe optio ex, fugit repellat asperiores! Odit excepturi nihil, numquam nisi dolorem fugit quidem sit soluta quae, distinctio consequatur nam? Officia.
-                </p>
+
             </article>
         </main>
+
+        <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
 
         <footer>
             <section>
