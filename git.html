@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheetMobile.css" media="screen and (max-width:480px)">
+    <link rel="stylesheet" href="stylesheetTablet.css" media="screen and (min-width:481px) and (max-width:959px)">
+    <link rel="stylesheet" href="stylesheet.css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="mainscript.js"></script>
+    <title>Webutvikling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kadwa:400,700');
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+
+        <header class="header">
+            <h1 style="font-family: generals;">Webutvikling</h1>
+            <nav>
+                <i class="menyikon fas fa-bars"></i>
+                <ul>
+                    <li><a class="navLink" href="../index.html">Studiewebsted</a></li>
+                    <li><a class="navLink" href="index.html">Webutvikling</a></li>
+                    <li class="navDropdown">Artikler Oblig 2
+                        <ul>
+                            <li><a class="navLink" href="git.html">Git / Github</a></li>
+                            <li><a class="navLink" href="mediatyper.html">Media-Typer</a></li>
+                            <li><a class="navLink" href="css-layouts.html">CSS-Layouts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainArtikkel">
+
+            <nav>
+                <ul class="tilbakeMeny">
+                    <li><a href="../index.html">Mitt Studiewebsted </a></li>
+                    <li><a href="index.html"> Webutvikling </a></li>
+                    <li>Git/Github</li>
+                </ul>
+            </nav>
+
+            <article>
+                <header>
+                    <h2>Git / Github</h2>
+                    <p class="publisert">
+                        Publisert <time datetime="2018-09-21">21.09.2018</time>.
+                    </p>
+                </header>
+
+                <h3>Git</h3>
+                <p>
+                    Git er programvare som brukes i forbindelse med versjonskontroll. 
+                    Man har et repository, en type mappe som oppdateres når man gjør endringer 
+                    i en lokal mappe. Så fort Git ser at den lokale mappen ikke inneholder 
+                    det samme som i repository, får man muligheten til å synkronisere. 
+                    Man kan velge å overskrive gammel versjon med den nye.
+                </p>
+
+                <h3>GitHub</h3>
+
+                <figure class="artikkelBilde">
+                    <img 
+                        src="medier/githubCommit.png" 
+                        alt="Min siste commit." 
+                         
+                    />
+                    <figcaption>
+                        Her er en skjermdump av min siste commit. Som man kan se, vises kodelinje nr. 
+                        41 to ganger. Den viser både den gamle og den nye versionen, så kan man velge 
+                        hvilken version som skal lagres.
+                    </figcaption>
+                </figure>
+                <p>
+                    GitHub er en nettbasert hosting service som tilbyr tjenester med 
+                    Git-teknologi. Denne tjenesten gjør det også mulig å samarbeide på én kode, 
+                    samtidig, uten at man overskriver hverandre. Dette sørger versionskontrollen 
+                    for.
+                </p>
+                <p>
+                    GitHub tilbyr både en betalingstjeneste og en gratis. Forskjellen er at "private 
+                    repositories" kun er tigjengelig mot betaling, samtidig som "public 
+                    repositories" er for alle. I Juni 2018 hadde GitHub over 28 millioner brukere 
+                    med til sammen 57 millioner repositories (inkludert 28 millioner public repositories).
+                </p>
+
+                <p>
+                    Det er lett å skjønne hvorfor GitHubs nettjeneste har såpass mange brukere, når 
+                    teknologien fungerer såpass smertefritt.
+                    GitHub er faktisk så vellykket at Microsoft har inngått en kjøpsavtale 
+                    verdt 7,5 milliarder amerikanske dollar! 
+                </p>
+                
+            </article>
+        </main>
+
+        <footer>
+            <section>
+                <div 
+                    class="fb-like" 
+                    data-href="http://itstud.hiof.no/~stianalb/weboblig2/index.html" 
+                    data-layout="button" 
+                    data-action="like" 
+                    data-size="large" 
+                    data-show-faces="true" 
+                    data-share="true">
+                </div>
+            </section>
+            <section>
+                <p>&copy; 2018  Stian Albretsen</p>
+                <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a>
+            </section>
+        </footer>
+        
+    </div>
+
+</body>
+</html>
