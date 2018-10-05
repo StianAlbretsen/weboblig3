@@ -15,27 +15,35 @@
 </head>
 <body>
 
-    <div class="grid">
+    <div class="wrapper">
 
         <header class="header">
-            <h1 style="font-family: generals;">Webutvikling</h1>
-            <nav>
-                <i class="menyikon fas fa-bars"></i>
-                <ul>
-                    <li><a class="navLink" href="../index.html">Studiewebsted</a></li>
-                    <li><a class="navLink" href="index.html">Webutvikling</a></li>
-                    <li class="navDropdown">Artikler Oblig 2
-                        <ul>
-                            <li><a class="navLink" href="git.html">Git / Github</a></li>
-                            <li><a class="navLink" href="mediatyper.html">Media-Typer</a></li>
-                            <li><a class="navLink" href="css-layouts.html">CSS-Layouts</a></li>
-                        </ul>
+            <h1>Webutvikling</h1>
+            <nav id="meny">
+                <label for="tm" id="toggle-meny"><span class="fas fa-bars"></span></label>
+                <input type="checkbox" id="tm">
+                <ul class="main-meny clearfix">
+                    <li><a href="#">Artikler Oblig 2 
+                        <span class="drop-icon">▾</span>
+                        <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm1">
+                    <ul class="sub-meny">
+                        <li><a href="git.html">Git / Github</a></li>
+                        <li><a href="mediatyper.html">Media-Typer</a></li>
+                        <li><a href="css-layouts.html">CSS-Layouts</a></li>
+                    </ul>
                     </li>
-                    <li class="navDropdown">Artikler Oblig 3
-                        <ul>
-                            <li><a class="navLink" href="responsivtDesign.html">Responsivt design</a></li>
-                            <li><a class="navLink" href="universellUtforming.html">Universell utforming</a></li>
-                        </ul>
+
+                    <li><a href="#">Artikler Oblig 3 
+                        <span class="drop-icon">▾</span>
+                        <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm2">
+                    <ul class="sub-meny">
+                        <li><a href="responsivtDesign.html">Responsivt design</a></li>
+                        <li><a href="universellUtforming.html">Universell utforming</a></li>
+                    </ul>
                     </li>
                 </ul>
             </nav>
@@ -43,12 +51,10 @@
 
         <main id="mainArtikkel">
 
-            <nav>
-                <ul class="tilbakeMeny">
-                    <li><a href="../index.html">Mitt Studiewebsted </a></li>
-                    <li><a href="index.html"> Webutvikling </a></li>
-                    <li>Media-Typer</li>
-                </ul>
+            <nav class="breadcrums">
+                <a href="../index.html">Mitt Studiewebsted </a>
+                <a href="index.html"> Webutvikling </a>
+                <a href="#"> Media-Typer</a>
             </nav>
 
             <article>
@@ -137,24 +143,38 @@
             </article>
         </main>
 
+        <aside>
+            <section class="asideS1">
+                <h2>Nyttige nettressurser</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </section>
+            
+            <section class="asideS2">
+                <h3>Responsivt design</h3>
+                <a class="asideLink" target="_blank" href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a>
+                <a class="asideLink" target="_blank" href="https://responsivedesign.is/">Responsive Web Design Is…</a>
+                <a class="asideLink" target="_blank" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/">Responsive Web Design Basics</a>
+                <a class="asideLink" target="_blank" href="https://www.creativebloq.com/rwd/responsive-web-design-tutorials-71410085">15 really useful responsive web design tutorials</a>
+                <a class="asideLink" target="_blank" href="https://designmodo.com/responsive-design-examples/">Responsive Web Design: 50 Examples and Best Practices</a>
+            </section>
+            
+            <section class="asideS3">
+                <h3>Github</h3>
+                <a class="asideLink" target="_blank" href="https://www.google.no/search?q=github&rlz=1C1GCEA_enNO810NO810&oq=github&aqs=chrome..69i57j0l5.2664j0j7&sourceid=chrome&ie=UTF-8">Google "github"</a>
+            </section>
+        </aside>
+
         <button onclick="topFunction()" id="toppBtn" title="Gå til toppen av siden">Topp</button>
 
         <footer>
-            <section>
-                <div 
-                    class="fb-like" 
-                    data-href="http://itstud.hiof.no/~stianalb/weboblig2/index.html" 
-                    data-layout="button" 
-                    data-action="like" 
-                    data-size="large" 
-                    data-show-faces="true" 
-                    data-share="true">
-                </div>
-            </section>
-            <section>
-                <p>&copy; 2018  Stian Albretsen</p>
-                <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a>
-            </section>
+            <p>&copy; 2018  Stian Albretsen</p>
+            <a style="color: #bbbbbb;" href="mailto:stian.albretsen@hiof.no">stian.albretsen@hiof.no</a><br />
+            <a href="../index.html">Studiewebsted</a>
         </footer>
         
     </div>
