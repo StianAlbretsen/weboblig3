@@ -45,6 +45,15 @@ img, article, section, header, nav {
     font-family: generals;
 }
 
+.headerLink {
+    color: #6b8d87;
+}
+
+.headerLink:hover {
+    text-decoration: none !important;
+    cursor: default;
+}
+
 .breadcrums {
     display: inline-block;
     padding: 0px;
@@ -73,7 +82,7 @@ img, article, section, header, nav {
     text-decoration: underline;
 }
 
-figcaption {
+figcaption, .publisert {
     color: rgb(143, 143, 143);
     font-style: italic;
     font-size: 0.8rem;
@@ -86,6 +95,7 @@ pre {
     color: #bbbbbb;
     padding:1em;
     border-radius: 5px;
+    margin-bottom: 3em;
 }
 
 @media screen and (min-width: 480px){
@@ -334,6 +344,11 @@ footer {
     #meny li:hover > input[type="checkbox"] + .sub-meny {
         display: block;
     }
+}
+
+img {
+    box-shadow: 15px 15px 20px #000000;
+    border-radius: 3px;
 }
 
 .imgPrew img {
