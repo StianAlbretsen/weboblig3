@@ -35,7 +35,6 @@ img, article, section, header, nav {
 }
 
 .header {
-    grid-area: "header";
     color: #6b8d87;
     text-shadow: 0.3em 0.3em 0.3em #000000;
     font-size: 1em;
@@ -66,7 +65,6 @@ img, article, section, header, nav {
 .breadcrums a {
     display: inline;
     font-size: 0.8rem;
-    color: #929292;
     color: #929292;
     text-decoration: none;
 }
@@ -100,26 +98,17 @@ pre {
 
 @media screen and (min-width: 480px){
     .header {
-        grid-area: "header";
-        color: #6b8d87;
-        text-shadow: 0.3em 0.3em 0.3em #000000;
-        font-size: 1.2em;
-        background: url(medier/header-background-indexed.png);
-        border-radius: 5px;
         text-align: center;
-        font-family: generals;
     }
 }
 
 main {
-    grid-area: "main";
     background-color: rgba(255, 255, 255, 0.1);
     padding:1em;
     border-radius: 5px;
 }
 
 aside {
-    grid-area: "aside";
     background-color: rgba(255, 255, 255, 0.1);
     padding:1em;
     border-radius: 5px;
@@ -396,13 +385,18 @@ img {
     .mainFlex {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
     }
 
     .mainFlex article {
         max-width: 48%;
+        margin: 0 auto;
+    }
+
+    .mainFlex article:last-of-type {
+        margin: 0;
     }
 
     .breadcrums {
@@ -491,6 +485,11 @@ img {
 @media screen and (min-width: 930px) {
     .mainFlex article {
         width: 32%;
+        margin: 0 1.332em 0 0;
+    }
+
+    .mainFlex article:nth-of-type(3) {
+        margin: 0;
     }
 
     aside {
@@ -542,6 +541,11 @@ img {
         grid-gap: 1em;
         max-width: 1200px;
         margin: auto;
+    }
+
+    .mainFlex article {
+        width: 32%;
+        margin: 0 1em 0 0;
     }
 
     .header {
