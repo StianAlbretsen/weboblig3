@@ -103,6 +103,7 @@
 
     .mainFlex article {
         max-width: 48%;
+    }
 }
                 </pre>
                 <p>
@@ -140,32 +141,13 @@
                     En annen måte å gjøre nettstedet responsivt er ved hjelp av flere stilark. Dette gjøres ved å lage et stilark 
                     for hver brakepoint. Stilarkene linkes inn i &lt;head&gt; ved å spesifisere viewport width på følgende måte;
                 </p>
-                <pre>
-&lt;link rel="stylesheet" 
-    type="text/css" 
-    <mark>media="screen and (max-width: 479px)"</mark>
-    href="stiler/stilarkMobilLiten.css" /&gt;
-
-&lt;link rel="stylesheet" 
-    type="text/css" 
-    <mark>media="screen and (min-width: 480px)"</mark>
-    href="stiler/stilarkMobil.css" /&gt;
-
-&lt;link rel="stylesheet" 
-    type="text/css" 
-    <mark>media="screen and (min-width: 600px)"</mark>
-    href="stiler/stilarkTab.css"&gt;
-
-&lt;link rel="stylesheet" 
-    type="text/css" 
-    <mark>media="screen and (min-width: 900px)"</mark>
-    href="stiler/stilarkTabLand.css"&gt;
-
-&lt;link rel="stylesheet" 
-    type="text/css" 
-    <mark>media="screen and (min-width: 1200px)"</mark>
-    href="stiler/stilarkDesktop.css"&gt; 
-                </pre>
+                <code>
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (max-width: 479px)"</mark><br />href="stiler/stilarkMobilLiten.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 480px)"</mark><br />href="stiler/stilarkMobil.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 600px)"</mark><br />href="stiler/stilarkTab.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 900px)"</mark><br />href="stiler/stilarkTabLand.css"&gt;<br /><br />
+                    &lt;link rel="stylesheet" type="text/css"<br /><mark>media="screen and (min-width: 1200px)"</mark><br />href="stiler/stilarkDesktop.css"&gt;
+                </code>
                 <p>
                     Her er det viktig å linke inn stilarkene i riktig rekkefølge på grunn av cascading effekten 
                     (det som linkes til nederst blir gjeldende). Hvis stilarkMobil.css var plassert nederst, 
@@ -185,7 +167,7 @@
                         src="medier/resSizeTest.gif" 
                         alt="Eksempel på hvordan forskjellige størrelser oppfører seg." 
                     />
-                    <!-- .gif laget med https://www.screentogif.com/ -->
+                    <!-- .gif laget med programvare fra https://www.screentogif.com/ -->
                     <figcaption>
                         Eksempel på hvordan forskjellige størrelser oppfører seg.
                     </figcaption>
