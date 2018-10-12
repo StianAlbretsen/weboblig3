@@ -10,6 +10,13 @@ body {
     margin:auto;
 }
 
+.hoppTilHovedinnhold {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    z-index: 9;
+}
+
 a {
     color: #f5f5f5;
 }
