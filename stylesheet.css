@@ -47,10 +47,12 @@ img, article, section, header, nav {
 
 .header h1 {
     text-shadow: 0.3em 0.3em 0.1em #000000;
+    text-decoration: none !important;
 }
 
 .headerLink {
     color: #6b8d87;
+    text-decoration: none !important;
 }
 
 .headerLink:hover {
